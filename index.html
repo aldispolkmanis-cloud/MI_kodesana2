@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="lv">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f6fa">
+    <title>Mani uzdevumi</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="app">
+      <header class="app-header">
+        <p class="eyebrow">Tavs ikdienas plānotājs</p>
+        <h1>Mani uzdevumi</h1>
+        <p class="intro">Pieraksti iecerēto un atzīmē paveikto.</p>
+      </header>
+
+      <form class="task-form" id="task-form">
+        <label class="visually-hidden" for="task-input">Jauns uzdevums</label>
+        <input
+          id="task-input"
+          type="text"
+          placeholder="Piemēram, izlasīt grāmatu"
+          autocomplete="off"
+          maxlength="200"
+        >
+        <button class="add-btn" id="add-btn" type="submit">Pievienot</button>
+      </form>
+
+      <nav class="filters" aria-label="Uzdevumu filtrs">
+        <button class="filter-btn is-active" type="button" data-filter="all" aria-pressed="true">Visi</button>
+        <button class="filter-btn" type="button" data-filter="active" aria-pressed="false">Aktīvie</button>
+        <button class="filter-btn" type="button" data-filter="completed" aria-pressed="false">Izpildītie</button>
+      </nav>
+
+      <ul class="task-list" id="task-list" aria-live="polite"></ul>
+      <p class="counter" id="counter" aria-live="polite">Atlikuši 0 uzdevumi</p>
+    </main>
+  </body>
+</html>
